@@ -1,0 +1,30 @@
+Fibonacci Series using recursion approach::
+
+#include <stdio.h>
+int fibonacci(int n);
+int f1=0,f2=1;
+void main()
+{
+    int n,th,x;
+    printf("enter number of terms in the series");
+    scanf("%d",&n);
+    if(n<0)
+    printf("invalid");
+    else
+    {
+      n=n-1;
+ x=fibonacci(n);
+       printf("%d",x);
+    }
+}
+int fibonacci(int n)
+{
+    int th;
+    if(n==0)
+    return f1;
+    else if(n==1)
+    return f2;
+    else
+    th=fibonacci(n-1)+fibonacci(n-2);
+    return th;
+}
