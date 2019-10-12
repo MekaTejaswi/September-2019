@@ -1,0 +1,41 @@
+Find the contiguous subarray within an array(containing atleast one number) which has largest sum::
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int a[100],i,j,n,*s,sum=0,largest=0,t[10],k,l=0,m=0,b=0,x=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    while(b!=n)
+    {
+        i=b;
+    while(i!=n)
+    { 
+    t[l]=0;
+    sum=0;
+    x=b;
+        for(j=b;j<=i;j++)
+        {
+            sum=sum+(a[j]);
+            t[l]=t[l]+1;
+        }
+        if(sum>largest)
+        {
+        largest=sum;
+        m=t[l];
+        s=(int*) malloc(m*sizeof(int));
+        for(k=0;k<m;k++)
+        {
+        s[k]=a[x];
+        x++;
+        }
+        l++;
+        }
+        i++;
+    }
+    b++;
+    }
+    for(k=0;k<m;k++)
+    printf("%d ",s[k]);
+}
