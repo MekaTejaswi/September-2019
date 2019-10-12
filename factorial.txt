@@ -1,0 +1,20 @@
+To find factorial of a number—iterative approach
+#include <stdio.h>
+void main()
+{
+  unsigned long long  fact=1;
+   int i,n;
+    scanf("%d",&n);
+    if(n<0)
+    printf("enter valid number");
+    else if(n==0)
+    printf("%d",1);
+    else
+    {
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("%llu",fact);
+    }
+}
