@@ -1,0 +1,27 @@
+Program  for  Fibonacci  series  using iterative approach::
+
+
+#include <stdio.h>
+void main()
+{
+    int n,f1=0,f2=1,th;
+    printf("enter number of terms in the series");
+    scanf("%d",&n);
+    if(n<0)
+    printf("invalid");
+else if(n==0)
+printf("%d",f1);
+  else if(n==1)
+    printf("%d ",f2);
+    else
+    {
+    while(n-2)
+    {
+        th=f1+f2;
+        f1=f2;
+        f2=th;
+        n--;
+  }
+printf("%d",th);
+    }
+    }
