@@ -1,0 +1,17 @@
+To find pow(x,n)%M using iterative approach::
+
+#include <stdio.h>
+int main()
+{
+    int n,mod,i,res=1;
+    unsigned int x;
+    scanf("%d %d %d",&n,&x,&mod);
+    while(x!=0)
+    {
+      res=res*n;
+      x--;
+    }
+    res=res%mod;
+    printf("%d",res);
+    return 1;
+}   
