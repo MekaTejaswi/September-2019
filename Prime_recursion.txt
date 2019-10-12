@@ -1,0 +1,29 @@
+To find anumber is prime or not using recursive approach::
+
+#include <stdio.h>
+int prime(int num,int i);
+void main()
+    { 
+        int num,i=2;
+        scanf("%d",&num);
+        if(num<=0)
+        printf("enter valid number");
+        else if(num==1)
+        printf("neithr prime nor composite");
+        else if(1==prime(num,i))
+        printf("prime");
+        else
+        printf("not prime");
+    }
+int prime(int num,int i)
+{
+    if(num%i==0 && i==num)
+    return 1;
+    else if(num%i==0 && i!=num)
+    return 0;
+    else
+    { 
+        i++;
+    prime(num,i);
+    }
+}
