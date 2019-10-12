@@ -1,0 +1,33 @@
+Given a read only array of n integers from 1 to n.one element is repeated and one element is missing.Find both repeating and missing element::
+
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int n,i,*v,*temp;
+    scanf("%d",&n);
+    temp=(int*) malloc((n+1) * sizeof(int));
+    v=(int*) malloc(n * sizeof(int));
+    if(temp == NULL || v==NULL)                     
+    {
+        printf("Error! memory not allocated.");
+        exit(0);
+    }
+    else
+    {
+    for(i=1;i<=n;i++)
+    scanf("%d",&v[i]);
+    for(i=1;i<=n;i++)
+    {
+        if(temp[v[i]]==0)
+        temp[v[i]]=1;
+        else
+        printf("%d ",v[i]);
+    }
+    for(i=1;i<=n;i++)
+    {
+    if(temp[i]==0)
+    printf("%d",i);
+    }
+    }
+}
