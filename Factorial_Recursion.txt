@@ -1,0 +1,27 @@
+Factorial using Recursion::
+
+#include <stdio.h>
+unsigned long long factorial(int n);
+int main()
+{
+  unsigned long long  fact=1;
+   int i,n;
+    scanf("%d",&n);
+    if(n<0)
+    {
+    printf("enter valid number");
+    return 1;
+    }
+     else
+    fact=factorial(n);
+    printf("%llu",fact);
+}
+unsigned long long factorial(int n)
+{
+    unsigned long long f;
+    if(n==0 || n==1)
+    return 1;
+    else
+    f=n*factorial(n-1);
+    return f;
+}
